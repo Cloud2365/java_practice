@@ -4,7 +4,7 @@ public class Main {
         Scanner scan = new Scanner(System.in,"CP866");
         System.out.print("Введите своё имя: ");
         String name = scan.next();
-        System.out.println("Привет," + name);
+        System.out.println("Привет, " + name);
         scan.close();
     }
 }
