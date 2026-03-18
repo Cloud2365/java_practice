@@ -64,3 +64,5 @@ public class TestSuper {
                           //Животное издаёт звук
     }
 }
+
+ 
