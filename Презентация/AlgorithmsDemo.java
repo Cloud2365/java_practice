@@ -86,7 +86,7 @@ public class AlgorithmsDemo {
         
         // С определенным Random'ом
         Collections.shuffle(shuffleList2, new Random(16)); // воспроизводимое перемешивание
-        System.out.println("С Random(42): " + shuffleList2);
+        System.out.println("С Random(16): " + shuffleList2);
         System.out.println();
  
         // ======== 5. MIN / MAX ========

@@ -32,7 +32,7 @@ public class MapDemo {
         
         // put() - добавить (O(1) для HashMap, O(log n) для TreeMap)
         hashMap.put("Иван", 25);
-        hashMap.put("Мария", 30);
+        hashMap.put("Катя", 30);
         hashMap.put("Петр", 28);
         hashMap.put("Иван", 26); // замена значения
         
@@ -44,7 +44,7 @@ public class MapDemo {
         System.out.println("getOrDefault: " + hashMap.getOrDefault("Анна", 0));
         
         // containsKey() - есть ли ключ (O(1) / O(log n))
-        System.out.println("containsKey('Мария'): " + hashMap.containsKey("Мария"));
+        System.out.println("containsKey('Мария'): " + hashMap.containsKey("Катя"));
         
         // containsValue() - есть ли значение (O(n) для всех!)
         System.out.println("containsValue(30): " + hashMap.containsValue(30));
@@ -65,7 +65,7 @@ public class MapDemo {
         Map<String, Integer> linked = new LinkedHashMap<>();
         Map<String, Integer> tree = new TreeMap<>();
         
-        List<String> names = List.of("Иван", "Петр", "Анна", "Мария", "Борис");
+        List<String> names = List.of("Иван", "Петр", "Анна", "Катя", "Борис");
         
         for (String name : names) {
             hash.put(name, name.length());
@@ -140,25 +140,12 @@ public class MapDemo {
         
         try {
             TreeMap<String, Integer> treeNull = new TreeMap<>();
-            treeNull.put(null, 100); // TreeMap НЕЛЬЗЯ null-ключ!
+            treeNull.put(null, 100); // TreeMap нельзя
         } catch (NullPointerException e) {
             System.out.println("TreeMap.put(null) -> NullPointerException");
         }
         System.out.println();
         
-        // ======== 7. КОГДА ЧТО ВЫБИРАТЬ ========
-        System.out.println("=== КОГДА ВЫБИРАТЬ ===\n");
-        
-        System.out.println("✅ HashMap:");
-        System.out.println("  - Просто словарь, порядок не важен");
-        System.out.println("  - Нужен самый быстрый get/put");
-        
-        System.out.println("\n✅ LinkedHashMap:");
-        System.out.println("  - Нужен порядок вставки");
-        System.out.println("  - LRU кэш");
-        
-        System.out.println("\n✅ TreeMap:");
-        System.out.println("  - Нужны отсортированные ключи");
-        System.out.println("  - Нужен поиск по диапазону (от X до Y)");
-    }
+     
+}
 }
