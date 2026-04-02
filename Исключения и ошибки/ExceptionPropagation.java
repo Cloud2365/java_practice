@@ -1,6 +1,6 @@
 public class ExceptionPropagation {
     
-    // Метод, который НЕ перехватывает исключение (оно уходит выше)
+    // Метод, который не перехватывает исключение (оно уходит выше)
     public static void methodWithoutCatch() {
         System.out.println("Вход в methodWithoutCatch");
         int[] arr = {1, 2, 3};
