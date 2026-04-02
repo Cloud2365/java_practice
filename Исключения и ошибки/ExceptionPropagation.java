@@ -26,7 +26,7 @@ public class ExceptionPropagation {
         methodWithCatch();  // исключение перехвачено, программа продолжает
         
         System.out.println("\n=== НЕПЕРЕХВАЧЕННОЕ ИСКЛЮЧЕНИЕ ===");
-        methodWithoutCatch();  // исключение НЕ перехвачено → аварийная остановка
+        methodWithoutCatch();  // исключение не перехвачено -> аварийная остановка
         
         System.out.println("Эта строка не выполнится (программа упадёт выше)");
     }
